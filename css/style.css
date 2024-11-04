@@ -1,0 +1,197 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #4c9fd6, #2d89a3);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.Header {
+    background-color: #02527d;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.Header-Nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Header-li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.Header-li a:hover {
+    background-color: #035a8e;
+    transition: background-color 0.3s;
+}
+
+/* Main Content */
+.Main {
+    flex: 1; /* Makes the main content take up the remaining space */
+    padding: 40px;
+    text-align: center;
+}
+
+.Main-h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Navigation Links */
+.Main-nav .Main-h2 {
+    color: #d4ebf9;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.Main-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Main-a {
+    color: #02354b;
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #d4ebf9;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.Main-a:hover, .Main-a.active {
+    background-color: #a1d3ec;
+    transition: background-color 0.3s;
+}
+
+/* Sections */
+.Main-section {
+    display: none;
+    background: rgba(0, 64, 102, 0.7);
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    max-width: 800px;
+}
+
+.Main-section.active {
+    display: block;
+}
+
+/* Inputs and Buttons */
+input[type="text"], input[type="number"], .Datos-btn, .button, #boton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #6dbad3;
+    border-radius: 5px;
+}
+
+.Datos-btn:hover, .button:hover, #boton:hover {
+    background-color: #024d7a;
+    transition: background-color 0.3s;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #d4ebf9;
+    text-align: center;
+}
+
+th {
+    background-color: #035a8e;
+    color: #ffffff;
+}
+
+td {
+    background-color: #d4ebf9;
+    color: #02354b;
+}
+
+tr:nth-child(even) td {
+    background-color: #a1d3ec;
+}
+
+/* Footer */
+.Footer {
+    background-color: rgba(2, 82, 125, 0.8); /* Transparent background */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Ensures the footer sticks to the bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Header-ul {
+        flex-direction: column;
+    }
+
+    .Main-h1 {
+        font-size: 2em;
+    }
+
+    .Main-ul {
+        flex-direction: column;
+    }
+
+    .Main-a {
+        margin: 5px 0;
+    }
+}
+
+/* Resaltado para la sección de Acerca de */
+.About-Main {
+    padding: 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+.About-Title {
+    font-size: 2.5em;
+    color: #006064;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.About-Description {
+    font-size: 1.2em;
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.About-Author {
+    font-size: 1.5em;
+    color: #00796b;
+    font-style: italic;
+    font-weight: bold;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria de inventarios</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="Header">
+        <nav class="Header-Nav">
+          <ul class="Header-ul">
+            <li class="Header-li">
+              <a href="index.html" class="Header-a" title="Inicio">Inicio</a>
+            </li>
+            <li class="Header-li">
+              <a href="creador.html" class="Header-a" title="Acerca">Creador</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="Main">
+        <h1 class="Main-h1">Teoria de Inventarios</h1>
+        <nav class="Main-nav">
+          <h2 class="Main-h2">Seleccione un metodo de solución: </h2>
+        <ul class="Main-ul">
+          <li class="Main-li"><a href="#" class="Main-a active">Compras con deficit</a></li>
+          <li class="Main-li"><a href="#" class="Main-a">Manufacturacion sin deficit </a></li>
+          <li class="Main-li"><a href="#" class="Main-a">Manufacturacion con deficit</a></li>
+          <li class="Main-li"><a href="#" class="Main-a">Compras sin deficit</a></li>
+        </ul>
+        </nav>
+
+        <section class="Main-section active cc-deficit">
+            <ul class="Datos">
+                <h2 class="Datos-h2">Modelo de compra con déficit</h2>
+                <li class="Datos-li">
+                  <label for="P" class="Datos-label">P: PRECIO UNITARIO</label
+                  ><input
+                    type="text"
+                    id="P"
+                    class="Datos-input"
+                    placeholder="Precio unitario"
+                  />
+                </li>
+                <li class="Datos-li">
+                  <label for="D" class="Datos-label">D: DEMANDA</label
+                  ><input
+                    type="text"
+                    id="D"
+                    class="Datos-input"
+                    placeholder="Demanda x mes"
+                  />
+                </li>
+                <li class="Datos-li">
+                  <label for="H" class="Datos-label">H COSTO DE COMPRA</label
+                  ><input
+                    type="text"
+                    id="H"
+                    class="Datos-input"
+                    placeholder="Costo de compra"
+                  />
+                </li>
+                <li class="Datos-li">
+                  <label for="E" class="Datos-label">E: COSTO DE DEFICIT POR UNIDAD</label
+                  ><input
+                    type="text"
+                    id="E"
+                    class="Datos-input"
+                    placeholder="Costo de deficit x unidad"
+                  />
+                </li>
+                <li class="Datos-li">
+                  <label for="M" class="Datos-label">M: COSTO DE TENENCIA POR UNIDAD</label
+                  ><input
+                    type="text"
+                    id="M"
+                    class="Datos-input"
+                    placeholder="Costo de tenencia x unidad"
+                  />
+                </li>
+               
+                <button id="btn-resolver" class="Datos-btn" type="submit">
+                  Resolver
+                </button>
+            </ul>
+            <div id="compra-con-deficit">
+
+            </div>
+        </section>
+
+        <section class="Main-section ms-deficit">
+          <div class="containerP">
+            <div class="container1">
+                  <h2 class="container1__h1">MODELO DE MANUFACTURACION SIN DEFICIT</h2>
+                  <h2 class="container1__h2">INGRESE LOS VALORES</h2>
+                 
+                  <label for="" class="container1__label">P: COSTO DE MANUFACTURACION</label> 
+                  <input class="container1_input" id="P_value" type="number" placeholder="Costo de manufacturación.."><br><br>
+                  <label for="" class="container1__label">H: COSTO DE HACER UNA COMPRA</label> 
+                  <input class="container1_input" id="H_value" type="number" placeholder="Costo de hacer una compra.."><br><br>
+                  <label for="" class="container1__label">D: LA DEMANDA </label> 
+                  <input class="container1_input" id="D_value" type="number" placeholder="La demanda.."><br><br>
+                  <label for="" class="container1__label">M: COSTO DE MANTENIMIENTO DE INVENTARIO</label> 
+                  <input class="container1_input" id="M_value" type="number" placeholder="Costo de mantenimiento de inventario.."><br><br>
+                  <label for="" class="container1__label">W: TASA DE MANUFACTURACION O FACTURACION </label> 
+                  <input class="container1_input" id="W_value" type="number" placeholder="Tasa de manufacturación o fabricación.."><br><br>
+  
+                  <br><br>
+                  <button class="button" id="resolution" >RESOLVER</button><br><br>
+            </div>
+            <div class="container2" id="container2">
+                  
+                  <label class="message2" id="message"></label>
+            
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="Main-section mc-deficit" id="m-con-deficit">
+          <h2 class="letraL">Modelo de manufacturación con déficit</h2>
+          <div class="principal">
+                  <div class="divL1" id="clase1">
+                      
+                      <label for="E1">E: COSTO DE DEFICIT</label>
+                      <input type="number" id="E1">
+                      <br><br>
+                      <label for="H1">H: COSTO DE HACER UNA COMPRA</label>
+                      <input type="number" id="H1">
+                      <br><br>
+                      <label for="D1">D: DEMANDA</label>
+                      <input type="number" id="D1">
+                      <br><br>
+                      <label for="M1">M: COSTO DE MANTENIMIENTO</label>
+                      <input type="number" id="M1">
+                      <br><br>
+                      <label for="W1">W TASA DE MANUFACTURACION O PRODUCCION</label>
+                      <input type="number" id="W1">
+                      <br><br>
+                      <label for="P1">P: PRECIO UNITARIO</label>
+                      <input type="number" id="P1">
+                      <br><br>
+                      <button class="boton" id="resolver_lmc"> resolver</button>
+                  </div>
+                  
+                  <div class="divL2" id="clase2"></div> 
+          </div>
+        </section>
+
+        <section class="Main-section cs-deficit">
+          
+          <div  method="post" class="containerMain">
+              <h2 class="Deficit-h2">Compras sin deficit</h2>
+              <div>
+                <label for="costo_ordenar">H: Costo de Ordenar</label>
+                <input
+                  type="number"
+                  id="costo_ordenar"
+                  name="costo_ordenar"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div>
+                <label for="demanda">D: Demanda</label>
+                <input type="number" id="demanda" name="demanda" required />
+              </div>
+              <div>
+                <label for="costo_mantenimiento"
+                  >M: Costo Unitario por Mantenimiento</label
+                >
+                <input
+                  type="number"
+                  id="costo_mantenimiento"
+                  name="costo_mantenimiento"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div>
+                <label for="precio">P: Precio</label>
+                <input type="number" id="precio" name="precio" step="0.01" required />
+              </div>
+              <button id="boton" type="submit" id="resolution">Calcular</button></a>
+            </div>
+            <br><br>
+          
+            <div name="tabla" id="tabla" class="container2">        
+          
+              </div>
+          
+          
+
+        </section>
+
+      </main>
+
+      <footer class="footer" style="text-align: center;">
+        <p class="Footer-p">&copy; Todos los Derechos Reservados R.C.C</p>
+
+      </footer>
+      <script type="module" src="js/compras-deficit.js"></script>
+      <script type="module" src="js/comprassin-deficit.js"></script>
+      <script type="module" src="js/manufacturacion-deficit.js"></script>
+      <script type="module" src="js/manufacturacionsin-deficit.js"></script>
+      <script type="module" src="js/main.js"></script>
+</body>
+</html>
